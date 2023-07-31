@@ -19,11 +19,11 @@ while(readin!=""):
             dic[i]+= 1
         
 if not len(dic):
-    print(srcN + " has no alphabetic character")
-    
-def val(x):
-    return x[1]
-dic=sorted(dic.items(),key=val,reverse=True)
+    print(srcN + " has no alphabetic character")    
+# def val(x):
+#     return x[1]
+# dic=sorted(dic.items(),key=val,reverse=True)
+dic=sorted(dic.items(),key=lambda x: x[1] , reverse=True)
 for k,v in  dic:
     if v==0 : continue
     print(k + " -> " + str(v))
